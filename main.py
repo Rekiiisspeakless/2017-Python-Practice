@@ -51,9 +51,7 @@ def main():
         3. Write a list comprehension to iterate through all frames,
            and make it be processed by Tensorflow.
         '''
-        processed = []
-        for frame in frames:
-            processed.append(session.run(out, feed_dict={image: [frame]}))
+        processed = [session.run(out, feed_dict = {image: [frame]}) for frame in frames]
 
 
 

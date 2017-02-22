@@ -31,7 +31,8 @@ class Video:
         while ret:
             ret, frame = self.cap.read()
             if ret:
-                frame = cv2.resize(frame, (image_h, image_w))
+                #frame = cv2.resize(frame, (image_h, image_w))
+                frame = resize(frame, image_h, image_w)
                 #resize(frame, image_h, image_w)
                 frames.append(frame)
 
